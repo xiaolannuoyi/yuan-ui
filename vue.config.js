@@ -29,5 +29,17 @@ module.exports = {
         // 修改它的选项...
         return options;
       });
+    //markdown
+    config.module
+      .rule("md")
+      .test(/\.md/)
+      .use("vue-loader")
+      .loader("vue-loader")
+      .end()
+      .use("vue-markdown-loader")
+      .loader("vue-markdown-loader/lib/markdown-compiler")
+      .options({
+        raw: true
+      });
   }
 };

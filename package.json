@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "highlight.js": "^9.15.10",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -25,6 +26,8 @@
     "node-sass": "^4.9.0",
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
+    "vue-loader": "^15.7.1",
+    "vue-markdown-loader": "^2.4.1",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
