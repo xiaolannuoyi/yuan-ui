@@ -11,7 +11,8 @@ export default new Router({
       path: "/",
       name: "test",
       // component: r => require.ensure([], () => r(require(`@/docs/test.md`)))
-      component: () => import("@/docs/test.md")
+      // component: () => import("@/docs/test.md")
+      component: () => import("@/docs/input.md")
     }
   ]
 });

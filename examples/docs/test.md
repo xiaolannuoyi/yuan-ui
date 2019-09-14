@@ -1,2 +1,3 @@
-## test
-----
+::: spoiler click me
+*content*
+:::

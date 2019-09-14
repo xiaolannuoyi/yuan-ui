@@ -19,7 +19,6 @@
 <script>
 export default {};
 </script>
-
 <style lang="scss">
 html,
 body {
@@ -39,5 +38,6 @@ body {
 }
 .view {
   flex: 1;
+  margin: 20px;
 }
 </style>
