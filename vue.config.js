@@ -53,6 +53,7 @@ module.exports = {
           //   return '<table class="table">';
           // };
           // 对于代码块去除v-pre,添加高亮样式
+          const defaultRender = md.renderer.rules.fence;
           MarkdownIt.renderer.rules.fence = (
             tokens,
             idx,
@@ -72,13 +73,7 @@ module.exports = {
                 token.content
               )}</code></pre></template>`;
             }
-            return MarkdownIt.renderer.rules.fence(
-              tokens,
-              idx,
-              options,
-              env,
-              self
-            );
+            return defaultRender(tokens, idx, options, env, self);
           };
           return source;
         },
@@ -103,7 +98,7 @@ module.exports = {
             "demo",
             {
               validate: function(params) {
-                return params.trim().match(/^demo\s+(.*)$/);
+                return params.trim().match(/^demo\s*(.*)$/);
               },
 
               render: function(tokens, idx) {
@@ -115,6 +110,7 @@ module.exports = {
                     tokens[idx + 1].type === "fence"
                       ? tokens[idx + 1].content
                       : "";
+
                   return `<demo-block>
                   <div class="source" slot="source">${content}</div>
                   ${description ? `<div>${md.render(description)}</div>` : ""}
@@ -123,7 +119,9 @@ module.exports = {
                 return "</demo-block>";
               }
             }
-          ]
+          ],
+          [require("markdown-it-container"), "tip"],
+          [require("markdown-it-container"), "warning"]
         ]
       });
   }

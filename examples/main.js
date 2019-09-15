@@ -9,7 +9,7 @@ import YuanUI from "../packages/index";
 import DemoBlock from "./components/DemoBlock.vue";
 
 import "~/theme-chalk/src/index.scss";
-import "./assets/styles/common.css";
+import "./assets/styles/common.scss";
 
 Vue.component("DemoBlock", DemoBlock);
 

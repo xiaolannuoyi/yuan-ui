@@ -5,9 +5,10 @@
     <div class="main">
       <!-- sidebar -->
       <div class="sidebar">
-        <router-link to="test">test</router-link>
+        <!-- <router-link to="test">test</router-link> -->
+        <nav-side :data="navsData"></nav-side>
       </div>
-      <div class="view">
+      <div class="view page-container">
         <router-view></router-view>
       </div>
     </div>
@@ -17,7 +18,18 @@
 </template>
 
 <script>
-export default {};
+import navSide from "./components/nav-side";
+import navsData from "./nav.config.json";
+export default {
+  components: {
+    navSide
+  },
+  data() {
+    return {
+      navsData
+    };
+  }
+};
 </script>
 <style lang="scss">
 html,
@@ -35,6 +47,7 @@ body {
 }
 .sidebar {
   width: 200px;
+  padding-left: 20px;
 }
 .view {
   flex: 1;
