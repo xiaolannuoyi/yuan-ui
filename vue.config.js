@@ -41,7 +41,7 @@ module.exports = {
       .end()
       .use("vue-markdown-loader")
       .loader("vue-markdown-loader/lib/markdown-compiler")
-      // .loader(path.resolve(__dirname, "./md-loader/index.js"));
+      // .loader(path.resolve(__dirname, "./md-loader/index.js"));//element-ui的md处理在md-loader中,这里没有使用.处理方式在下面
 
       .options({
         raw: true,
@@ -49,9 +49,9 @@ module.exports = {
         // 定义处理规则
         preprocess: (MarkdownIt, source) => {
           // 对于markdown中的table,
-          // MarkdownIt.renderer.rules.table_open = function() {
-          //   return '<table class="table">';
-          // };
+          MarkdownIt.renderer.rules.table_open = function() {
+            return '<table class="doctable">';
+          };
           // 对于代码块去除v-pre,添加高亮样式
           const defaultRender = md.renderer.rules.fence;
           MarkdownIt.renderer.rules.fence = (
@@ -112,7 +112,7 @@ module.exports = {
                       : "";
 
                   return `<demo-block>
-                  <div class="source" slot="source">${content}</div>
+                  <div slot="source">${content}</div>
                   ${description ? `<div>${md.render(description)}</div>` : ""}
                   `;
                 }
