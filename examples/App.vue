@@ -44,6 +44,7 @@ body {
 .main {
   min-height: calc(100vh - 120px);
   display: flex;
+  padding: 0 30px;
 }
 .sidebar {
   width: 200px;
@@ -51,6 +52,5 @@ body {
 }
 .view {
   flex: 1;
-  margin: 20px;
 }
 </style>
