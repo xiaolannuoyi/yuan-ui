@@ -11,6 +11,7 @@ module.exports = {
       filename: "index.html" // 输出文件
     }
   },
+  parallel: false, //解决打包时,报错问题  https://github.com/QingWei-Li/vue-markdown-loader/issues/61
   // 扩展 webpack 配置
   chainWebpack: config => {
     // @ 默认指向 src 目录，这里要改成 examples
