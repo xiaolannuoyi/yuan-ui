@@ -175,7 +175,7 @@
   }
 }
 //doc 的 table 样式
-.doctable {
+.element-doc table {
   border-collapse: collapse;
   width: 100%;
   background-color: #fff;

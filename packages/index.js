@@ -3,10 +3,14 @@ import Row from "./row";
 import Col from "./col";
 import Button from "./button";
 import ButtonGroup from "./button-group";
+import Radio from "./radio";
+import RadioGroup from "./radio-group";
+import RadioButton from "./radio-button";
+
 // 所有组件列表
-const components = [YuanTest, Row, Col, Button, ButtonGroup];
+const components = [YuanTest, Row, Col, Button, ButtonGroup, Radio, RadioGroup, RadioButton];
 // 定义 install 方法，接收 Vue 作为参数
-const install = function(Vue) {
+const install = function (Vue) {
   // 判断是否安装，安装过就不继续往下执行
   if (install.installed) return;
   install.installed = true;
