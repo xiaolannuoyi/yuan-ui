@@ -21,6 +21,14 @@ module.exports = {
       .set("~", path.resolve("packages"))
       .set("src", path.resolve("src"));
 
+    config.module
+      .rule("eslint")
+      .use("eslint-loader")
+      .loader("eslint-loader")
+      .tap(options => {
+        options.fix = true;
+        return options;
+      });
     // 把 packages 和 examples 加入编译，因为新增的文件默认是不被 webpack 处理的
     config.module
       .rule("js")
@@ -45,4 +53,5 @@ module.exports = {
       .loader("vue-markdown-loader/lib/markdown-compiler")
       .loader(path.resolve(__dirname, "./md-loader/index.js"));//element-ui的md处理在md-loader中,这里没有使用.处理方式在下面
   }
+
 };

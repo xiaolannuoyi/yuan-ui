@@ -1,4 +1,4 @@
-import RadioGroup from './src/radio-group';
+import RadioGroup from "./src/radio-group";
 
 /* istanbul ignore next */
 RadioGroup.install = function(Vue) {

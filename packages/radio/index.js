@@ -1,4 +1,4 @@
-import Radio from './src/radio';
+import Radio from "./src/radio";
 
 /* istanbul ignore next */
 Radio.install = function(Vue) {
