@@ -77,15 +77,15 @@ html, body {
     min-height: 100%;
   }
   
-  .container,
-  .page-container {
-    width: 1140px;
-    padding: 0;
-    margin: 0 auto;
-  }
+  // .container,
+  // .page-container {
+  //   width: 1140px;
+  //   padding: 0;
+  //   margin: 0 auto;
+  // }
   
   .page-container {
-    padding-top: 55px;
+    padding: 20px;
   
     h2 {
       font-size: 28px;

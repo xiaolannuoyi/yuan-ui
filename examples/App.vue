@@ -35,22 +35,41 @@ export default {
 html,
 body {
   margin: 0;
+  height: 100%;
 }
 .header,
 .footer {
+  position: absolute;
   height: 60px;
   background-color: antiquewhite;
+  width: 100%;
+}
+.header {
+  top: 0;
+}
+.footer {
+  bottom: 0;
 }
 .main {
-  min-height: calc(100vh - 120px);
-  display: flex;
-  padding: 0 30px;
+  position: absolute;
+  bottom: 60px;
+  top: 60px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebar,
+.view {
+  height: 100%;
+  overflow: auto;
 }
 .sidebar {
+  float: left;
   width: 200px;
   padding-left: 20px;
 }
 .view {
-  flex: 1;
+  float: left;
+  width: calc(100% - 260px);
 }
 </style>
