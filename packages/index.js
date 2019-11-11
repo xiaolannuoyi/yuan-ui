@@ -7,6 +7,8 @@ import Radio from "./radio";
 import RadioGroup from "./radio-group";
 import RadioButton from "./radio-button";
 import Input from "./input";
+
+import InputNumber from "./input-number";
 // 所有组件列表
 const components = [
   YuanTest,
@@ -17,7 +19,8 @@ const components = [
   Radio,
   RadioGroup,
   RadioButton,
-  Input
+  Input,
+  InputNumber
 ];
 // 定义 install 方法，接收 Vue 作为参数
 const install = function(Vue) {
